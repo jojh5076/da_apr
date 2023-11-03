@@ -1,97 +1,109 @@
-@import url(https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+html {
+    font-family: Pretendard, 'Noto Sans KR', sans-serif;
+}
 
 /* 노멀라이즈 시작 */
-body, ul, li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
-    list-style: none;		/* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
-  }
-  
-  a {
-    color: inherit;		/* 부모 엘리먼트의 값을 물려받는다 */
-    text-decoration: none;	/* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
-  }
-  /* 노멀라이즈 끝 */
-  
-  /* 라이브러리 시작 */
-  .inline-grid {
+    list-style: none;
+    /* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
+}
+
+a {
+    color: inherit;
+    /* 부모 엘리먼트의 값을 물려받는다 */
+    text-decoration: none;
+    /* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
+}
+
+/* 노멀라이즈 끝 */
+
+/* 라이브러리 시작 */
+.inline-grid {
     font-size: 0;
-  }
-  
-  .inline-grid > * {
-    font-size: 1rem;
+}
+
+.inline-grid>* {
+    font-size: 0px;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-  }
-  .con { 
+}
+
+.con {
     margin-left: auto;
     margin-right: auto;
-  }
-  /* 라이브러리 끝 */
-  
-  /* 커스텀 시작 */
-  
-  :root {
-    --site-width: 2000px;
-  }
-  
-  .con-min-width {
+}
+
+/* 라이브러리 끝 */
+
+/* 커스텀 시작 */
+
+:root {
+    --site-width: 1500px;
+}
+
+.con-min-width {
     min-width: var(--site-width);
-  }
-  
-  .top-bar > .con {
+}
+
+.top-bar>.con {
     width: var(--site-width);
-  }
-  
-  /* 드롭다운 메뉴 시작 */
-  .top-bar__menu-box-1 > ul ul {
+}
+
+/* 드롭다운 메뉴 시작 */
+.top-bar__menu-box-1>ul ul {
     display: none;
-  }
-  
-  .top-bar__menu-box-1 > ul > li {
+}
+
+.top-bar__menu-box-1>ul>li {
     display: inline-block;
-    width: calc(100%/16);
-  }
-  
-  .top-bar__menu-box-1 {
+    width: calc(100%/17);
+}
+
+.top-bar__menu-box-1 {
     text-align: center;
     margin-top: 100px;
-  }
-  
-  .top-bar__menu-box-1 ul {
+}
+
+.top-bar__menu-box-1 ul {
     background-color: white;
     color: black;
-  }
-  
-  .top-bar__menu-box-1 ul > li > a {
+}
+
+.top-bar__menu-box-1 ul>li>a {
     display: block;
-    padding: 10px 50px;
-  }
-  
-  .top-bar__menu-box-1 ul > li:hover > a {
+    padding: 0px 1px;
+}
+
+.top-bar__menu-box-1 ul>li:hover>a {
     background-color: white;
-  }
-  
-  .top-bar__menu-box-1 > ul > li {
+}
+
+.top-bar__menu-box-1>ul>li {
     position: relative;
-  }
-  
-  .top-bar__menu-box-1 > ul > li > ul {
+}
+
+.top-bar__menu-box-1>ul>li>ul {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-  }
-  
-  .top-bar__menu-box-1 > ul > li:hover > ul {
+}
+
+.top-bar__menu-box-1>ul>li:hover>ul {
     display: block;
-  }
-  
-  .top-bar__menu-box-1 > ul {
+}
+
+.top-bar__menu-box-1>ul {
     border-radius: 20px;
-  }
-  
-  /* 드롭다운 메뉴 끝 */
-  
-  /* 커스텀 끝 */
+}
+
+/* 드롭다운 메뉴 끝 */
+
+/* 커스텀 끝 */
