@@ -1,65 +1,97 @@
 @import url(https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff);
 
-* {
+/* 노멀라이즈 시작 */
+body, ul, li {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: Pretendard, 'Noto Sans KR', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-li {
-    list-style: none;
-}
-
-#menu1 {
-background: white;
-height: 50px;
-}
-
-#menu1 ul {
-    width: 500px;
-    margin: 0 auto;
-}
-
-#menu1 .main>li {
-    float: left;
-    width: 25%;
-    height: 50px;
-    line-height: 50px;
+    list-style: none;		/* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
+  }
+  
+  a {
+    color: inherit;		/* 부모 엘리먼트의 값을 물려받는다 */
+    text-decoration: none;	/* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
+  }
+  /* 노멀라이즈 끝 */
+  
+  /* 라이브러리 시작 */
+  .inline-grid {
+    font-size: 0;
+  }
+  
+  .inline-grid > * {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  .con { 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* 라이브러리 끝 */
+  
+  /* 커스텀 시작 */
+  
+  :root {
+    --site-width: 2000px;
+  }
+  
+  .con-min-width {
+    min-width: var(--site-width);
+  }
+  
+  .top-bar > .con {
+    width: var(--site-width);
+  }
+  
+  /* 드롭다운 메뉴 시작 */
+  .top-bar__menu-box-1 > ul ul {
+    display: none;
+  }
+  
+  .top-bar__menu-box-1 > ul > li {
+    display: inline-block;
+    width: calc(100%/16);
+  }
+  
+  .top-bar__menu-box-1 {
     text-align: center;
-    background: #98E0AD;
-    position: relative;
-}
-
-#menu1 .main>li:hover .sub {
+    margin-top: 100px;
+  }
+  
+  .top-bar__menu-box-1 ul {
+    background-color: white;
+    color: black;
+  }
+  
+  .top-bar__menu-box-1 ul > li > a {
     display: block;
-}
-
-#menu1 .main>li a{
-display: block;
-}
-
-#menu1 .main>li a:hover{
-    background: #138535;
-    color: #fff;
-}
-#menu1 .main .sub{
+    padding: 10px 50px;
+  }
+  
+  .top-bar__menu-box-1 ul > li:hover > a {
+    background-color: white;
+  }
+  
+  .top-bar__menu-box-1 > ul > li {
+    position: relative;
+  }
+  
+  .top-bar__menu-box-1 > ul > li > ul {
     position: absolute;
-    top: 50px;
+    top: 100%;
     left: 0;
     width: 100%;
-    display: none;
-}
-#menu1 .main .sub li{
-    background: #DAAADB;
-}
-#menu1 .main .sub li a:hover{
-    background: #7A287B;
-}
+  }
+  
+  .top-bar__menu-box-1 > ul > li:hover > ul {
+    display: block;
+  }
+  
+  .top-bar__menu-box-1 > ul {
+    border-radius: 20px;
+  }
+  
+  /* 드롭다운 메뉴 끝 */
+  
+  /* 커스텀 끝 */
