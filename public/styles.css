@@ -1,109 +1,66 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-html {
-    font-family: Pretendard, 'Noto Sans KR', sans-serif;
-}
-
-/* 노멀라이즈 시작 */
-body,
-ul,
-li {
+/* Resetting default styles */
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    /* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
-}
-
-a {
-    color: inherit;
-    /* 부모 엘리먼트의 값을 물려받는다 */
-    text-decoration: none;
-    /* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
-}
-
-/* 노멀라이즈 끝 */
-
-/* 라이브러리 시작 */
-.inline-grid {
-    font-size: 0;
-}
-
-.inline-grid>* {
-    font-size: 0px;
-    display: inline-block;
-    vertical-align: top;
     box-sizing: border-box;
-}
-
-.con {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 라이브러리 끝 */
-
-/* 커스텀 시작 */
-
-:root {
-    --site-width: 1500px;
-}
-
-.con-min-width {
-    min-width: var(--site-width);
-}
-
-.top-bar>.con {
-    width: var(--site-width);
-}
-
-/* 드롭다운 메뉴 시작 */
-.top-bar__menu-box-1>ul ul {
-    display: none;
-}
-
-.top-bar__menu-box-1>ul>li {
-    display: inline-block;
-    width: calc(100%/17);
-}
-
-.top-bar__menu-box-1 {
+  }
+  
+  /* Basic styles */
+  nav {
     text-align: center;
-    margin-top: 100px;
-}
 
-.top-bar__menu-box-1 ul {
-    background-color: white;
-    color: black;
-}
-
-.top-bar__menu-box-1 ul>li>a {
-    display: block;
-    padding: 0px 1px;
-}
-
-.top-bar__menu-box-1 ul>li:hover>a {
-    background-color: white;
-}
-
-.top-bar__menu-box-1>ul>li {
+  }
+  
+  nav ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
     position: relative;
-}
-
-.top-bar__menu-box-1>ul>li>ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-}
-
-.top-bar__menu-box-1>ul>li:hover>ul {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
     display: block;
-}
-
-.top-bar__menu-box-1>ul {
-    border-radius: 20px;
-}
-
-/* 드롭다운 메뉴 끝 */
-
-/* 커스텀 끝 */
+    padding: 10px;
+  }
+  
+  nav ul li ul {
+    position: absolute;
+    top: 40px; /* Adjust the dropdown position */
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f9f9f9;
+    transition: opacity 0.3s, visibility 0.3s, top 0.4s;
+    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  nav ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  
+  nav ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+  
+  nav ul li ul li a {
+    padding: 8px 15px;
+    display: block;
+    color: gray;
+  }
+  
+  nav ul li ul li a:hover {
+    background-color: #ddd;
+  }
+  
